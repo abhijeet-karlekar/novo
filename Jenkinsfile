@@ -9,7 +9,7 @@ pipeline {
   choice choices: ['Dev', 'QA', 'Stage', 'Test'], description: 'Pick any one', name: 'ENVIRONMENT'
     }
       stages {
-        stage('The Message3') { 
+        stage('Executing Stage-Environment') { 
             steps {
                 sh "echo Choice: ${params.ENVIRONMENT}"
                 echo "Hey...this is Staging"
