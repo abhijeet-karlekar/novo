@@ -11,6 +11,7 @@ pipeline {
       stages {
         stage('The Message') { 
             steps {
+                sh "echo Choice: ${params.Please, choose environment to run..}
                 echo "Hey...This is Dev. environment"
             }
         }
