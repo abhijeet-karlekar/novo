@@ -6,7 +6,7 @@ pipeline {
     }
 }
       stages {
-        stage('static web') { 
+        stage('The Message') { 
             steps {
                 echo "Hey...This is Dev. environment"
             }
