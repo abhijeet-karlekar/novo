@@ -6,7 +6,7 @@ pipeline {
     }
 }
     parameters {
-  choice choices: ['Dev', 'Test', 'Stage', 'QA'], description: 'Pick any one', name: 'ENVIRONMENT'
+  choice choices: ['Dev', 'QA', 'Stage', 'Test'], description: 'Pick any one', name: 'ENVIRONMENT'
     }
       stages {
         stage('The Message') { 
