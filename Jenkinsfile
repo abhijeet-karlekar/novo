@@ -12,7 +12,7 @@ pipeline {
         stage('The Message') { 
             steps {
                 sh "echo Choice: ${params.ENVIRONMENT}"
-                
+                echo "Hey..This is Dev environment"
             }
         }
         
