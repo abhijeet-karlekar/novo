@@ -11,7 +11,7 @@ pipeline {
       stages {
         stage('The Message') { 
             steps {
-                sh "echo Choice: ${params.ENVIRONMENT}"
+                sh "echo choice: ${params.ENVIRONMENT}"
                 
             }
         }
