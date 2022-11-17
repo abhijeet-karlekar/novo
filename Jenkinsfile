@@ -1,11 +1,21 @@
 pipeline {
-    agent any
-
-    stages {
-        stage('QA-Stage') {
-            steps {
-                echo 'Hey..This is QA environment'
-            }
-        }
+    agent {
+    node {
+        label 'zero'
+        customWorkspace '/mnt/homeworkWS'
     }
 }
+    parameters {
+  choice choices: ['Dev', 'QA', 'Stage', 'Test'], description: 'Pick any one', name: 'ENVIRONMENT'
+    }
+      stages {
+        stage('The Message2') { 
+            steps {
+                sh "echo Choice: ${params.ENVIRONMENT}"
+                echo "Hey...this is QA"
+            }
+        }
+        
+    }
+}
+
